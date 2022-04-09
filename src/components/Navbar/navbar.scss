@@ -1,0 +1,119 @@
+@import '../../global.scss';
+
+.navbar{
+    width: 100%;
+    height: 80px;
+    top: 0;
+    z-index: 3;
+    position: absolute;
+
+    li{
+      a{
+      font-size: 20px;
+      }
+    }
+    
+    .wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .left{
+        display: flex;
+        align-items: center;
+
+        .logo{
+            font-size: 40px;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: none;
+            color: #1f2122;
+            margin-left: 50px;
+
+            @include mobile{
+              font-size: 20px;
+              display: inline;
+            }
+
+            &.hover-underline-animation {
+                display: inline-block;
+                position: relative;
+                color: #1f2122;
+              }
+              
+              &.hover-underline-animation:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: #1f2122;
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out;
+              }
+              
+              &.hover-underline-animation:hover:after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+              }
+          }
+      }
+
+      .right{
+        display: flex;
+        font-size: 24px;
+        padding: 14px 20px;
+
+        .hamburger{
+          display: none;
+        }
+
+        @include mobile{
+          .item-wrapper{
+            display: none;
+          }
+          .hamburger{
+            background-color: transparent;
+            border: 0;
+            color: #1f2122;
+            cursor: pointer;
+            font-size: 20px;
+            display: block;
+    
+            &:focus{
+              outline: none;
+            }
+          }
+        }
+     
+
+        .home-nav{
+            margin-right: 30px;
+            text-decoration: none;
+            color: #1f2122;
+          }
+
+          .portfolio-nav{
+            margin-right: 30px;
+            text-decoration: none;
+            color: #1f2122;
+        }
+        
+        .blog-nav{
+            margin-right: 30px;
+            text-decoration: none;
+            color: #1f2122;
+        }
+
+        .about-nav{
+          margin-right: 100px;
+          text-decoration: none;
+          color: #1f2122;
+      }
+      }
+
+
+  }

@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.app{
+    height: 100vh;
+
+    .sections{
+        width: 100%;
+        height: calc(100vh - 80px) ; /* Navbar height'inee  80px verdiğimiz için taşırmamak adına böyle yapıyoruız*/
+        position: relative;
+        top: 80px;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+        scrollbar-width: none; // for firefox
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+        > *{ /* Header portfolio gibi her bir eleman için */
+            width: 100%;
+            height: calc(100vh - 80px) ; 
+            scroll-snap-align: start;
+        }
+    }
+}

@@ -1,0 +1,96 @@
+@import '../../global.scss';
+
+.about{
+    background-color: white;
+
+    @include mobile{
+        justify-content: space-around;
+      }
+    
+    h1{
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        @include mobile{
+            flex-direction: column;
+            display: inline;
+          }
+ 
+        .left{
+            flex: 0.5;
+
+            .imgContainer{
+                justify-content: center;
+                align-items: center;
+                display: flex;
+
+                img{
+                    object-fit: cover;
+                    width: 400px;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    margin: auto;
+                    border-radius: 15px;       
+                 
+                    @include mobile{
+                        height: 420px;
+                    }
+                }
+            }
+        }
+
+        .right{
+            flex: 0.5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            .textArea{
+                margin-right: 100px;
+
+                @include mobile{
+                    padding: 10px 12.5px;
+                    margin: auto;
+                }
+                
+                h3{
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                }
+
+               .mail{
+                   margin-top: 30px;
+                   display: flex;
+                   font-size: 20px;
+                   span{
+                       margin-left: 10px;
+                   }
+               }
+               .role{
+                display: flex;
+                font-size: 20px;
+                span{
+                    margin-left: 10px;
+                }
+            }
+            .phone{
+                display: flex;
+                font-size: 20px;
+                span{
+                    margin-left: 10px;
+                }
+            }
+            }
+        }
+    }
+}
